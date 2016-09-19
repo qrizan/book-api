@@ -22,8 +22,8 @@ http://localhost:8000/
 ```
 
 ### login
-![ScreenShot](https://raw.githubusercontent.com/qrizan/book/master/screenshot/login.png)
+![ScreenShot](https://raw.githubusercontent.com/qrizan/book-api/master/screenshot/login.png)
 
 
 ### show 
-![ScreenShot](https://raw.githubusercontent.com/qrizan/book/master/screenshot/book-all.png)
+![ScreenShot](https://raw.githubusercontent.com/qrizan/book-api/master/screenshot/book-all.png)
