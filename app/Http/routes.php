@@ -11,6 +11,16 @@
 |
 */
 
+
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return response()->json([
+        'success' => TRUE, 
+        'message' => "Welcome to book web api!"
+    ]);   	
 });
+
+$app->post('/login', 'LoginController@index');
+$app->post('/register', 'UserController@register');
+
+// resultoute using middlerware
+$app->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@getUser']);
