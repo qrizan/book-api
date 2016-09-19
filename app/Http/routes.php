@@ -22,5 +22,17 @@ $app->get('/', function () use ($app) {
 $app->post('/login', 'LoginController@index');
 $app->post('/register', 'UserController@register');
 
-// resultoute using middlerware
+
 $app->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@getUser']);
+
+$app->get('/category', 'CategoryController@index');
+$app->post('/category/create', 'CategoryController@create');	
+$app->get('/category/{id}', 'CategoryController@read');
+$app->post('/category/update/{id}', 'CategoryController@update');
+$app->get('/category/delete/{id}', 'CategoryController@delete');
+
+$app->get('/book', 'BookController@index');
+$app->post('/book/create', 'BookController@create');
+$app->get('/book/{id}', 'BookController@read');
+$app->post('/book/update/{id}', 'BookController@update');
+$app->get('/book/delete/{id}', 'BookController@delete');
